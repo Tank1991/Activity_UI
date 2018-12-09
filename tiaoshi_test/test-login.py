@@ -2,6 +2,7 @@
 from selenium import webdriver
 from time import sleep
 from case.test_case.test_login_pages import login
+from case.test_case.test_add_media_pages import add_media
 from selenium.webdriver.common.action_chains import ActionChains
 
 from pages.select_act_pages import Select
@@ -16,6 +17,7 @@ from pages.select_act_pages import Select
 url = "https://test102.maxuscloud.cn/web/authcenter/index.html#/"
 driver = webdriver.Firefox()
 login(driver, url)
+add_media(driver)
 # driver.maximize_window()
 # driver.get(url)
 # try:
@@ -39,14 +41,32 @@ login(driver, url)
 # media = driver.find_element_by_xpath("//*[@class = 'siderbar-menu-ul']/li[1]")
 # ActionChains(driver).move_to_element(media).perform()
 # driver.find_element_by_xpath("html/body/div[1]/section/header/div/div[1]/div[2]/div/div[1]/div[2]/div/ul/li[1]/div/span").click()
-sleep(3)
-driver.find_element_by_class_name("newActive").click()
-sleep(3)
-driver.find_element_by_xpath("html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[1]/li[1]/div/div/input").send_keys("123")
+# sleep(3)
+# driver.find_element_by_class_name("newActive").click()
+# sleep(5)
+# #活动名称
+# driver.find_element_by_xpath("html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[1]/li[1]/div/div/input").send_keys("123")
+# driver.find_element_by_xpath("html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[1]/li[2]/div/div/div[1]/input").click()
+# driver.find_element_by_xpath("html/body/div[2]/div[1]/div[1]/ul/li[1]/span").click()
+
+# driver.find_element_by_xpath("html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[1]/li[3]/div/div/div[2]/input").click()
+# #选择车系
+# driver.find_element_by_xpath("html/body/div[3]/div[1]/div[1]/ul/li[1]").click()
+# driver.find_element_by_xpath("html/body/div[3]/div[1]/div[1]/ul/li[2]").click()
+# driver.find_element_by_xpath("html/body/div[3]/div[1]/div[1]/ul/li[3]").click()
+# driver.find_element_by_xpath("html/body/div[3]/div[1]/div[1]/ul/li[4]").click()
+# #时间
+# driver.find_element_by_xpath("html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[2]/li[1]/div/span/../div/input").send_keys("2018-12-01")
+# driver.find_element_by_xpath("html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[2]/li[2]/div/span/../div/input").send_keys("2018-12-03")
+# driver.find_element_by_xpath("html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[2]/li[3]/div/span/../div/input").send_keys("2018-12-08")
+#
+# driver.find_element_by_xpath("html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[3]/li[1]/div/span/../div/div/input").click()
 
 
 
 
+
+# driver.find_element_by_xpath("html/body/div[5]/div[1]/div[1]/ul/li[2]/span").click()
 
 sleep(5)
 driver.quit()
