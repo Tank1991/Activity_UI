@@ -2,7 +2,7 @@
 from selenium import webdriver
 from time import sleep
 from case.test_case.test_login_pages import login
-url = "https://test102.maxuscloud.cn/web/authcenter/index.html#/"
+url = "https://test.maxuscloud.cn/web/authcenter/index.html#/"
 driver = webdriver.Firefox()
 login(driver, url)
 # driver.maximize_window()

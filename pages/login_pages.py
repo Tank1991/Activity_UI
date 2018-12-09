@@ -48,7 +48,7 @@ if __name__ == '__main__':
 
     from selenium import webdriver
     from time import sleep
-    url = "https://test102.maxuscloud.cn/web/authcenter/index.html#/"
+    url = "https://test.maxuscloud.cn/web/authcenter/index.html#/"
     driver = webdriver.Firefox()
     driver.get(url)
     login_page = LoginPage(driver)
