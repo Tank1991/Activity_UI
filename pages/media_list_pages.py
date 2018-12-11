@@ -9,6 +9,7 @@ class Meida_list_pages(Base):
         #点击媒体列表页面的新建按钮，进入新增页面
         '''
         self.click(self.newActive)
+        print("进入新增媒体活动页面.")
 
 
 
