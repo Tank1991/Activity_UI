@@ -18,21 +18,39 @@ class LoginPage(Base):
     huodong = ("xpath" ,".//*[@id='app']/div/div[3]/div/div[3]/div/div[1]/div[2]/div[2]/ul/li[3]/a/div")
 
     def click_cha(self):
+        '''
+        #点击首页的❌号
+        '''
         self.click(self.cha)
 
     def input_user(self,text =""):
+        '''
+        #输入账户名
+        '''
         self.sendKeys(self.user,text)
 
     def input_pwd(self , text =""):
+        '''
+        #输入密码
+        '''
         self.sendKeys(self.pwd,text)
 
     def input_yzm(self, text =" "):
+        '''
+        #输入验证码
+        '''
         self.sendKeys(self.yzm , text)
 
     def click_login_button(self):
+        '''
+        #点击登录按钮
+        '''
         self.click(self.button)
 
     def click_know(self):
+        '''
+        #点击四个我知道图片
+        '''
         print("点击四个我知道图片。")
         self.click(self.know1)
         self.click(self.know2)
@@ -41,6 +59,9 @@ class LoginPage(Base):
 
 
     def click_huodong(self):
+        '''
+        #点击进入活动平台
+        '''
         print("进入活动管理平台。")
         self.click(self.huodong)
 

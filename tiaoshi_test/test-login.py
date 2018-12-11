@@ -63,15 +63,15 @@ add_media(driver)
 # #时间
 # driver.find_element_by_xpath("html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[2]/li[1]/div/span/../div/input").send_keys("2018-12-01")
 # driver.find_element_by_xpath("html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[2]/li[2]/div/span/../div/input").send_keys("2018-12-03")
-driver.find_element_by_xpath("html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[2]/li[3]/div/span").click()
+# driver.find_element_by_xpath("html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[2]/li[3]/div/span").click()
 # driver.find_element_by_xpath("html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[2]/li[3]/div/span/../div/input").send_keys("2018-12-08")
 # #一级来源
 # driver.find_element_by_xpath("html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[3]/li[1]/div/span/../div/div/input").click()
 
 # driver.find_element_by_xpath("html/body/div[5]/div[1]/div[1]/ul/li[2]/span").click()
-
+#                                 html/body/div[2]/div[1]/div[1]/ul/li[3]/span
 sleep(5)
-driver.quit()
+# driver.quit()
 
 
 # document.getElementsByClassName("el-select-dropdown el-popper")[9].style.display= 'block'

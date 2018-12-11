@@ -12,7 +12,7 @@ def add_media(driver):
     add_media_page.mudi()
     add_media_page.chexi_select()
     add_media_page.input_time()
-    add_media_page.first_select()
+    # add_media_page.first_select()  #一级来源没定位到
 
 
 
