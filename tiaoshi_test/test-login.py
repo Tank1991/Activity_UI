@@ -70,6 +70,14 @@ add_media(driver)
 
 # driver.find_element_by_xpath("html/body/div[5]/div[1]/div[1]/ul/li[2]/span").click()
 #                                 html/body/div[2]/div[1]/div[1]/ul/li[3]/span
+
+# driver.find_element_by_xpath("html/body/div[1]/section/section/main/section/div[1]/div[2]/div/span/../div/textarea").send_keys("jianshu")
+
+# e =driver.find_element_by_class_name("topText").click()
+
+
+
+
 sleep(5)
 # driver.quit()
 

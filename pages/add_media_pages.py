@@ -2,6 +2,9 @@ from common.base import Base
 from selenium import webdriver
 from time import sleep
 class Add_media_pages(Base):
+    '''
+    #这是媒体新增页面基础信息输入的类
+    '''
 
     act_name = ("xpath", "html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[1]/li[1]/div/div/input")
     def act_name_input(self , text = "活动名称信息"):
@@ -64,8 +67,9 @@ class Add_media_pages(Base):
 
     # first_source = ("xpath" ,"html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[3]/li[1]/div/span/../div/div/input")
     first_source = ("xpath", "html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[3]/li[1]/div/div/div/input")
-    ziran = ("xpath" , "html/body/div[2]/div[1]/div[1]/ul/li[3]/span")
-    def first_select(self ):
+    ziran = ("xpath" , "html/body/div[2]/div[1]/div[1]/ul/li[1]/span")
+                        # html/body/div[2]/div[1]/div[1]/ul/li[1]/span
+    def first_select(self):
         '''
         选择一级来源
         '''
@@ -76,7 +80,17 @@ class Add_media_pages(Base):
         self.click(self.ziran)
         self.js_none()
 
+    condition_jianshu = ("xpath" ,"html/body/div[1]/section/section/main/section/div[1]/div[2]/div/span/../div/textarea")
+    def input_jianshu(self,text = "媒体新增的活动简述的哈"):
+        self.sendKeys(self.condition_jianshu , text )
+        self.click(self.stop)
 
 
+    activity_range =  ("class name", "topText")
+    def move_activity_rang(self):
+        '''
+        #屏幕移动到活动范围的位置
+        '''
+        self.huadong_now(self.activity_range)
 
 
