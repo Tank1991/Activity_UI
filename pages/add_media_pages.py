@@ -1,6 +1,8 @@
 from common.base import Base
 from selenium import webdriver
 from time import sleep
+
+
 class Add_media_pages(Base):
     '''
     #这是媒体新增页面基础信息输入的类
@@ -74,11 +76,9 @@ class Add_media_pages(Base):
         选择一级来源
         '''
         print("选择一级来源。")
-        sleep(3)
-        self.js_block()
-        self.click(self.first_source)
-        self.click(self.ziran)
-        self.js_none()
+        # self.js_block()
+        js = "document.querySelectorAll('.el-scrollbar .el-select-dropdown__item')[0].click()"
+        self.driver.execute_script(js)
 
     condition_jianshu = ("xpath" ,"html/body/div[1]/section/section/main/section/div[1]/div[2]/div/span/../div/textarea")
     def input_jianshu(self,text = "媒体新增的活动简述的哈"):
@@ -93,4 +93,10 @@ class Add_media_pages(Base):
         '''
         self.huadong_now(self.activity_range)
 
+
+
+    save = ("class name" , "save")
+    def save_act(self):
+        self.huadong_now(self.save)
+        self.click(self.save)
 

@@ -15,7 +15,7 @@ from pages.select_act_pages import Select
 # option.add_argument('--user-data-dir= C:\\Users\\11735\\AppData\\Local\\Google\\Chrome\\User_Data')
 
 url = "https://test102.maxuscloud.cn/web/authcenter/index.html#/"
-driver = webdriver.Firefox()
+driver = webdriver.Chrome()
 login(driver, url)
 add_media(driver)
 # media_add_jichu(driver)
@@ -27,7 +27,7 @@ add_media(driver)
 # except:
 #     pass
 # driver.find_element_by_css_selector("[class='el-input__inner'][placeholder='账号']").send_keys("15250276275")
-# driver.find_element_by_css_selector("[class='el-input__inner'][placeholder='密码']").send_keys("Pass1234")
+    # driver.find_element_by_css_selector("[class='el-input__inner'][placeholder='密码']").send_keys("Pass1234")
 # driver.find_element_by_css_selector("[class='el-input__inner'][placeholder='验证码']").send_keys(" ")
 # driver.find_element_by_css_selector("button>span").click()
 # sleep(3)
@@ -77,11 +77,12 @@ add_media(driver)
 
 
 
-
+# el-table__body
+#这是点击一级来源主动开拓的
+# js = "document.querySelectorAll('.el-scrollbar .el-select-dropdown__item')[0].click()"
+# driver.execute_script(js)
 sleep(5)
 # driver.quit()
 
 
 # document.getElementsByClassName("el-select-dropdown el-popper")[9].style.display= 'block'
-
-
