@@ -1,6 +1,6 @@
 from pages.login_pages import LoginPage
 from time import sleep
-def login(driver , url, user = "15250276275" , pwd = "Pass1234"):
+def login(driver , url, user = "18458333065" , pwd = "Pass1234"):
     login_page = LoginPage(driver)
     driver.get(url)
     driver.maximize_window()

@@ -14,7 +14,7 @@ from pages.select_act_pages import Select
 # option = webdriver.ChromeOptions()
 # option.add_argument('--user-data-dir= C:\\Users\\11735\\AppData\\Local\\Google\\Chrome\\User_Data')
 
-url = "https://test102.maxuscloud.cn/web/authcenter/index.html#/"
+url = "http://testdms.maxuscloud.cn/web/authcenter/index.html#/"
 driver = webdriver.Chrome()
 login(driver, url)
 add_media(driver)
