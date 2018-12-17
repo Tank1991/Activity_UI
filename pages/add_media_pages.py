@@ -70,6 +70,8 @@ class Add_media_pages(Base):
     # first_source = ("xpath" ,"html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[3]/li[1]/div/span/../div/div/input")
     first_source = ("xpath", "html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[3]/li[1]/div/div/div/input")
     ziran = ("xpath" , "html/body/div[2]/div[1]/div[1]/ul/li[1]/span")
+    second_source = ("xpath" ,"html/body/div[1]/section/section/main/section/div[1]/div[2]/ul[3]/li[2]/div/span/../div/div/input")
+    a = ("xpath" , "html/body/div[3]/div[1]/div[1]/ul/li[1]/span")
                         # html/body/div[2]/div[1]/div[1]/ul/li[1]/span
     def first_select(self):
         '''
@@ -79,6 +81,11 @@ class Add_media_pages(Base):
         # self.js_block()
         js = "document.querySelectorAll('.el-scrollbar .el-select-dropdown__item')[0].click()"
         self.driver.execute_script(js)
+        sleep(1)
+        self.click(self.second_source)
+        js = "document.querySelectorAll('.el-scrollbar .el-select-dropdown__item')[89].click()"
+        self.driver.execute_script(js)
+
 
     condition_jianshu = ("xpath" ,"html/body/div[1]/section/section/main/section/div[1]/div[2]/div/span/../div/textarea")
     def input_jianshu(self,text = "媒体新增的活动简述的哈"):
@@ -97,6 +104,36 @@ class Add_media_pages(Base):
 
     save = ("class name" , "save")
     def save_act(self):
+        '''保存按钮'''''
         self.huadong_now(self.save)
         self.click(self.save)
+
+
+    button_1 = ("xpath" ,"html/body/div[1]/section/section/main/section/div[3]/div[1]/div[2]/i")
+    c = ("class name" , "el-icon-d-arrow-right picIcon")
+    def level(self):
+        '''
+        活动范围--一级
+        '''
+        #一级
+        js = "document.querySelectorAll('.el-scrollbar .el-select-dropdown__item')[5].click()"
+        self.driver.execute_script(js)
+        #新疆
+        js = "document.querySelectorAll('.el-scrollbar .el-select-dropdown__item')[7].click()"
+        self.driver.execute_script(js)
+        self.click(self.button_1)
+        sleep(2)
+        self.huadong_down()
+
+    shenbao = ("xpath" , ".//*[@id='flex']/input")
+    nian = ("xpath" , ".//*[@id='flex']/div/label[1]/span[1]/span")
+    zhibshu = ("xpath" , ".//*[@id='flex']/div/input")
+    def input_meiti(self):
+        js = "document.querySelectorAll('.el-scrollbar .el-select-dropdown__item')[62].click()"
+        self.driver.execute_script(js)
+        self.sendKeys(self.shenbao , "123456")
+        self.click(self.nian)
+        js_1 = "document.querySelectorAll('.el-scrollbar .el-select-dropdown__item')[77].click()"
+        self.driver.execute_script(js_1)
+        self.sendKeys(self.zhibshu , "456789")
 

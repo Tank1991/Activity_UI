@@ -4,7 +4,7 @@ from time import sleep
 from case.test_case.test_login_pages import login
 from case.test_case.test_add_media_pages import add_media
 from selenium.webdriver.common.action_chains import ActionChains
-from case.test_case.test_media_add import media_add_jichu
+# from case.test_case.test_media_add import media_add_jichu
 from pages.select_act_pages import Select
 
 #火狐的加载缓存信息
@@ -14,7 +14,7 @@ from pages.select_act_pages import Select
 # option = webdriver.ChromeOptions()
 # option.add_argument('--user-data-dir= C:\\Users\\11735\\AppData\\Local\\Google\\Chrome\\User_Data')
 
-url = "http://testdms.maxuscloud.cn/web/authcenter/index.html#/"
+url = "http://test102.maxuscloud.cn/web/authcenter/index.html#/"
 driver = webdriver.Chrome()
 login(driver, url)
 add_media(driver)
@@ -83,6 +83,7 @@ add_media(driver)
 # driver.execute_script(js)
 sleep(5)
 # driver.quit()
+# git clone https://github.com/Tank1991/Activity_UI.git
 
 
 # document.getElementsByClassName("el-select-dropdown el-popper")[9].style.display= 'block'
