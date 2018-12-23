@@ -129,6 +129,9 @@ class Add_media_pages(Base):
     nian = ("xpath" , ".//*[@id='flex']/div/label[1]/span[1]/span")
     zhibshu = ("xpath" , ".//*[@id='flex']/div/input")
     def input_meiti(self):
+        '''
+        输入投放费用
+        '''
         js = "document.querySelectorAll('.el-scrollbar .el-select-dropdown__item')[62].click()"
         self.driver.execute_script(js)
         self.sendKeys(self.shenbao , "123456")
@@ -139,10 +142,17 @@ class Add_media_pages(Base):
 
     fujian =  ("xpath" , "html/body/div[1]/section/section/main/section/div[6]/div[1]/div/div[2]/input")
     def send_fujian(self):
+        '''
+        上传附件的
+        '''
         self.click(self.fujian)
         sleep(1)
         import os
-        os.system(r"C:\Users\11735\Desktop\auto.exe")
+        curpath = os.path.dirname(os.path.realpath(__file__))  #当前操作的文件夹的路径
+        print(curpath)
+        # casePath = os.path.join(curpath,"testCase")
+        # print(casePath)
+        os.system(r"%s\auto.exe"%curpath)
         sleep(2)
 
 
