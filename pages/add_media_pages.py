@@ -122,7 +122,7 @@ class Add_media_pages(Base):
         js = "document.querySelectorAll('.el-scrollbar .el-select-dropdown__item')[7].click()"
         self.driver.execute_script(js)
         self.click(self.button_1)
-        sleep(2)
+        sleep(3.5)
         self.huadong_down()
 
     shenbao = ("xpath" , ".//*[@id='flex']/input")
@@ -136,4 +136,14 @@ class Add_media_pages(Base):
         js_1 = "document.querySelectorAll('.el-scrollbar .el-select-dropdown__item')[77].click()"
         self.driver.execute_script(js_1)
         self.sendKeys(self.zhibshu , "456789")
+
+    fujian =  ("xpath" , "html/body/div[1]/section/section/main/section/div[6]/div[1]/div/div[2]/input")
+    def send_fujian(self):
+        self.click(self.fujian)
+        sleep(1)
+        import os
+        os.system(r"C:\Users\11735\Desktop\auto.exe")
+        sleep(2)
+
+
 
