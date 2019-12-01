@@ -19,6 +19,8 @@ driver = webdriver.Firefox()
 login(driver, url)
 add_media(driver)
 
+
+
 # driver.find_element_by_css_selector("[class='el-input__inner'][placeholder='账号']").send_keys("15250276275")
 # driver.find_element_by_css_selector("[class='el-input__inner'][placeholder='密码']").send_keys("Pass1234")
 
